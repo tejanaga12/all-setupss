@@ -13,7 +13,8 @@ wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-8.9.6.508
 unzip -o sonarqube-8.9.6.50800.zip
 
 # Install Java 11 (Amazon Corretto)
-sudo yum install java-21-amazon-corretto -y
+#udo yum install java-21-amazon-corretto -y
+dnf install java-11-amazon-corretto java-11-amazon-corretto-devel -y
 
 # Create sonar user with home directory if it doesn't exist
 if ! id sonar >/dev/null 2>&1; then
